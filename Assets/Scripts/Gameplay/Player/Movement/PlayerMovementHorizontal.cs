@@ -13,12 +13,12 @@ public class PlayerMovementHorizontal : PlayerMovement {
         base.Update();
         if (pm.rb.velocity.x > maxVelocity.x)
         {
-            Debug.Log("Hit max speed! speed = " + pm.rb.velocity.x.ToString());
+            //Debug.Log("Hit max speed! speed = " + pm.rb.velocity.x.ToString());
             pm.rb.velocity = maxVelocity;
         }
         if (pm.rb.velocity.x < - maxVelocity.x)
         {
-            Debug.Log("Hit max negative speed! speed = " + pm.rb.velocity.x.ToString());
+            //Debug.Log("Hit max negative speed! speed = " + pm.rb.velocity.x.ToString());
             pm.rb.velocity =  - maxVelocity;
         }
     }

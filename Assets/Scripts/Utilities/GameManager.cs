@@ -84,10 +84,8 @@ public class GameManager : MonoBehaviour {
 
     public void UpdateScoreCounters(int hitPlayerNum)
     {
-        Debug.Log("updating score");
         foreach (ScoreCounter sc in scoreCounters)
         {
-            Debug.Log("in scorecounter " + sc.name);
             if (hitPlayerNum == 2 && sc.playerNum == 1)
                 sc.SetScore(player1Points);
             else if (hitPlayerNum == 1 && sc.playerNum == 2)
@@ -127,7 +125,6 @@ public class GameManager : MonoBehaviour {
 
     public void StopGame()
     {
-        Debug.Log("Stopgame");
         MainMenuController.instance.DisplayMenu();
         DestroyBullets();
         //move players back to start
@@ -145,26 +142,7 @@ public class GameManager : MonoBehaviour {
 
     private void EndGame()
     {
-        Debug.Log("endgame");
         StopGame();
         PauseController.instance.RemoveMenu();
     }
-
-
-
-    private void OnLevelFinishedLoadingScene(Scene scene, LoadSceneMode mode)
-    {
-
-    }
-
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnLevelFinishedLoadingScene;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnLevelFinishedLoadingScene;
-    }
-
 }
