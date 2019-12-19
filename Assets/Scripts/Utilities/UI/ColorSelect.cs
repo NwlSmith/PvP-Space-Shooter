@@ -2,11 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
+ * Date created: 10/3/2018
+ * Creator: Nate Smith
+ * 
+ * Description: UI Utility that selects and sets the various texts, sprites, and buttons
+ * to the selected color at the start of the game.
+ * This script is intended to quickly and easily color new UI objects.
+ */
 public class ColorSelect : MonoBehaviour {
 
+    //Public objects.
     public PlayerManager pm;
 
+    /*
+     * If a certain element exists on this UI gameobject,
+     * set it to this player's color while preserving the alpha value.
+     */
     private void Start()
     {
         Shadow s = GetComponent<Shadow>();
@@ -33,6 +45,10 @@ public class ColorSelect : MonoBehaviour {
         }
     }
 
+    /*
+     * Return this player's color while preserving alpha.
+     * alpha: Preserved alpha.
+     */
     private Color SetColorNoAlpha(float alpha)
     {
         return new Color(pm.color.r, pm.color.g, pm.color.b, alpha);

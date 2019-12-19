@@ -1,83 +1,25 @@
-﻿/*
- * Mechanics:
- *      - 2 players, one at top of screen one at bottom
- *      - each has 3 buttons. Up, down, and fire
- *      - player hits other player with bullet, they die, other player gets point
- *      - also, occasionally have coin appear at side of screen furthest from each player, if they get it they get another point
- *      - first player to 50 points wins
- *      - pressing up/down / left/right will push the player with a force in that direction.
- *          - Be able to charge button press?
- *          - otherwise, have it go on button down
- *      - if get to edge, the player can go out of the area but then are pushed back in
- *      - must limit velocity of player
- *      - no limit to number of bullets you can shoot, but it will be onbuttondown
- *          - could change this?
- *      - have woosh sound when bullet close to player?
- *      
- *      - Do I want the player's rotation to effect the angle of the bullet?
- *      - movement needs to be more responsive
- *      
- * Will need:
- *      - music ---Done
- *      - points indicators ---Done
- *      - pause button ---Done
- *      - main menu ---Done
- *      - need to detect device and change UI to fit. :(
- *      - camera moving with events ---Done
- *      
- *      
- *  Music:
- *  
- *          - intro screen? https://www.youtube.com/watch?v=rGc3VUbeix8
- *          - could chop up: https://www.youtube.com/watch?v=u0n1xg2RjMk
- *          
- *          - 125 bpm https://www.looperman.com/loops/detail/137059/trippie-redd-x-juice-wrld-type-drums-140bpm-trap-drum-loop goes more with the others, very slow/chill
- *          & 160 bpm https://www.looperman.com/loops/detail/136888/metro-boomin-type-beat-loop-160bpm-trap-drum-loop
- *          & 140 bpm https://www.looperman.com/loops/detail/136905/aggressive-trap-drums-by-mulaofficial-140bpm-trap-drum-loop this could be the intro? https://www.looperman.com/loops/detail/136910/aggressive-808-by-mulaofficial-140bpm-trap-drum-loop
- *          & 130 bpm https://www.looperman.com/loops/detail/136876/overdriven-808-trap-drum-130bpm-trap-drum-loop intense with this intro 140 bpm https://www.looperman.com/loops/detail/136874/go-f-k-yourself-2-140bpm-trap-drum-loop and this? https://www.looperman.com/loops/detail/136806/stay-alive-drums-146bpm-trap-drum-loop
-            MULAOFFICIAL
- *
- * Camera: -- DONE
- *          - always have it swaying a little bit
- *          - on player getting hit, do a little shake
- *          - more stuff
- * Pause Menu:
- *          - Resume game -- DONE
- *          - Options -- DONE
- *          - Quit -- DONE
- * Extras:
- *  - party mode
- *      - take a drink every time you get hit
- *      - take a shot every round you win
- *      - finish your drink if you lose
- *      - finish your drink if both get hit at the same time - POSSIBLE BUG
- *  - ability to choose ship, choose color.
- * Tweaks to try:
- *  - movement
- *      - set velocity or add to velocity instead of adding force?
- *      
- *      
- * Have separate canvases? nah... but need unified one to control whole thing.
- * stage announcement vertical?
- * pause button delay, goes under stage change ui
- * endgame needs to be finished
- *  - say who won, blow up other player
- *  - slowly go to main menu
- *  - main menu needs title screen to shrink
- *  - explode bullets, stop movement on mainmenu, set time to 1
- *  
- *  
- *  Game where controls switch?
- *  -   could be like asteroids but have many different control schemes?
- *      1. tank controls, right moves forward and to the left, right moves forward and to the right, can press both to move forward
- *      2. joystick, have turn and move in that direction
- *      3. jave 4 directional buttons but can only press 1 at a time
- *      4. inverted joystick
- *      5. 
- *      
- *  - how to handle switching?
- *      - just different control UIs that swap in and out?
- *  - tutorial:
- *      - https://www.youtube.com/watch?v=nGw_UBJQPDY
- *      
- */
+﻿Date: 12/18/2019
+
+**SPACE WAR!** was a solo project of mine that I took on as an exercise in refinement;
+I wanted to create a game that showcased my programming prowess and ability to produce a fully fleshed-out and functional experience,
+while focusing less on the actual gameplay mechanics, and more on the interfaces and interactions.
+Admittedly, the gameplay is not particularly engaging, but that was the choice I made so I could focus on creating a polished product.
+
+I had a lot of code that needed to perform similar functions, so I decided to break up my code into small classes.
+While there are a good deal of files in this project, many of them have very little code.
+
+One thing of note to this project is that I wanted to prototype and test a large variety of UI options and control schemes.
+To accomplish this, I made each MenuController find its own UI elements rather than dragging and dropping them individually.
+As a result, Canvas objects are easily interchangeable and UI elements are easily added and removed.
+
+	- To see this in action, I would recommend looking at the MenuController and OptionsController classes, located in Scripts -> Utilities.
+
+One of my future goals for this project is to create a game where the control scheme changes at certain intervals.
+To accomplish this, I separated the movement, shooting, and central control classes so I could modify each.
+There are currently three control schemes (located in Scripts -> Gameplay -> Player -> Movement):
+
+	- PlayerMovementHorizontal: the one in the "Game" scene where left and right pivot the player horizontally).
+
+	- PlayerMovementTank: the one in "1PlayerAsteroidsTank" scene where left and right rotate the player and forward propels it forward.
+
+	- PlayerMovementJoystick: the one in "1PlayerAsteroids" scene the player is controlled with a virtual joystick.

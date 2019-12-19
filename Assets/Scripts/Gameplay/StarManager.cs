@@ -31,6 +31,6 @@ public class StarManager : MonoBehaviour {
 
     private void AdjustSpeed()
     {
-        main.simulationSpeed = pm.rb.velocity.magnitude / pm.playerMovement.m_maxSpeed; ;
+        main.simulationSpeed = pm.rb.velocity.magnitude / pm.playerMovement.maxSpeed; ;
     }
 }

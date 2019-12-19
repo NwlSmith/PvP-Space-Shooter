@@ -1,9 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+ * Date created: 10/20/2018
+ * Creator: Nate Smith
+ * 
+ * Description: Controls the rotation of the players ship sprites.
+ * Used on the SpriteHolder of ships with PlayerMovementTank.
+ */
 public class PlayerTiltTank : PlayerTilt {
 
+    /*
+     * Calculates the angle of the player sprite, based on their velocity and their player number.
+     * If the player is not moving, they should point in the same direction as their movement.
+     * Player 2 is flipped 180 degrees.
+     */
     protected override void CalculateAngle()
     {
         float z = 0;
