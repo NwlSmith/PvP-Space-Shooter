@@ -1,9 +1,11 @@
 Date: 12/18/2019
 
-**SPACE WAR!** was a solo project of mine that I took on as an exercise in refinement;
+**SPACE WAR!** was a solo project of mine for the iPad that I took on as an exercise in refinement;
 I wanted to create a game that showcased my programming prowess and ability to produce a fully fleshed-out and functional experience,
 while focusing less on the actual gameplay mechanics, and more on the interfaces and interactions.
 Admittedly, the gameplay is not particularly engaging, but that was the choice I made so I could focus on creating a polished product.
+
+Due to some frustration with xCode, I never got the finished product up on the App Store, but I plan to in the future.
 
 I had a lot of code that needed to perform similar functions, so I decided to break up my code into small classes.
 While there are a good deal of files in this project, many of them have very little code.
