@@ -12,11 +12,11 @@ One thing of note to this project is that I wanted to prototype and test a large
 To accomplish this, I made each MenuController find its own UI elements rather than dragging and dropping them individually.
 As a result, Canvas objects are easily interchangeable and UI elements are easily added and removed.
 
-	- To see this in action, I would recommend looking at the MenuController and OptionsController classes, located in Scripts -> Utilities.
+	- To see this in action, I would recommend looking at the MenuController and OptionsController classes, located in Assets -> Scripts -> Utilities.
 
 One of my future goals for this project is to create a game where the control scheme changes at certain intervals.
 To accomplish this, I separated the movement, shooting, and central control classes so I could modify each.
-There are currently three control schemes (located in Scripts -> Gameplay -> Player -> Movement):
+There are currently three control schemes (located in Assets -> Scripts -> Gameplay -> Player -> Movement):
 
 	- PlayerMovementHorizontal: the one in the "Game" scene where left and right pivot the player horizontally).
 
