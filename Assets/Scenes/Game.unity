@@ -3601,7 +3601,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 92ab205d8d122694189a826601be722f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4996a5dd3ca392e4ea92bbe1ea688d5a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5989,6 +5989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songNum: 0
+  initSong: 0
   audioClips:
   - {fileID: 8300000, guid: a352bf154aacabd41ac6c6c1b7389527, type: 3}
   - {fileID: 8300000, guid: b2a1cd6a0bede394f87917f1cc3122df, type: 3}
